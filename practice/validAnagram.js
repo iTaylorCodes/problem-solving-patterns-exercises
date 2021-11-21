@@ -32,7 +32,8 @@ function quadraticValidAnagram(str1, str2) {
   return str1.split("").sort().join("") === str2.split("").sort("").join("");
 }
 
-// Colt's Implementation - O(n)
+// Colt's Implementation
+// O(n)
 function makeFreqCounter(str) {
   const frequencies = new Map();
   for (let val of str) {
@@ -42,6 +43,7 @@ function makeFreqCounter(str) {
   return frequencies;
 }
 
+// O(n + m)
 function isValidAnagram(str1, str2) {
   if (str1.length !== str2.length) return false;
   const charMap1 = makeFreqCounter(str1);
